@@ -19,6 +19,7 @@ Instead of writing prompts from scratch, you type a command and a structured exp
 - [Working with data](#-working-with-data)
 - [Prompt workflows](#-prompt-workflows)
 - [Prompt Reference](#-prompt-reference)
+- [Agents](#-agents)
 - [Adding a New Skill](#-adding-a-new-skill)
 - [Contributing](#-contributing)
 - [Disclaimer](#️-disclaimer)
@@ -122,6 +123,7 @@ Claude will respond with a bullet list of exactly what to provide, then stop.
 | Analytics | `/ga4-traffic` `/ga4-conversions` `/ga4-content` `/gsc-indexing` `/gsc-links` |
 | Reporting | `/competitor-analysis` `/content-gap` `/gsc-performance` `/monthly-report` `/penalty-diagnosis` |
 | GEO / LLM | `/geo-audit` `/geo-rewrite` `/geo-entity` `/geo-visibility` `/geo-citations` |
+| Agents | `/agent-monthly-report` |
 
 ---
 
@@ -450,6 +452,33 @@ GEO (Generative Engine Optimization) — optimizing content so AI tools like Cha
 
 ---
 
+## 🤖 Agents
+
+Agents are autonomous multi-step commands that run a full workflow end-to-end — detecting data sources, running multiple analyses in sequence, writing the output, and saving it — without requiring you to babysit each step.
+
+| Agent | What it does | Command |
+|---|---|---|
+| `agent-monthly-report.md` | Detects GA4 and GSC data (MCP or local CSV), analyzes organic traffic and search performance, cross-references both, writes a complete client-ready monthly report, saves it to `outputs/`, and suggests follow-up commands | `/agent-monthly-report` |
+
+**Usage:**
+
+```
+/agent-monthly-report site:acme.com period:"January 2026"
+```
+
+The agent will:
+1. Detect available data (MCP live pull or `data/ga4-*.csv` / `data/gsc-*.csv`)
+2. Analyze GA4 organic traffic
+3. Analyze GSC performance
+4. Cross-reference both to surface top opportunities and concerns
+5. Write the full client-ready report
+6. Save it to `outputs/monthly-report-acme.com-january-2026.md`
+7. Suggest 2–3 follow-up slash commands based on findings
+
+Agent skill files live in `skills/agents/` and follow the same conventions as regular skills.
+
+---
+
 ## ➕ Adding a New Skill
 
 1. **Create the skill file** in the right category under `skills/`, using this structure:
@@ -462,7 +491,7 @@ Input I Will Provide:
 Output Instructions:
 ```
 
-2. **Name the file to match the command** you want (e.g. `technical-seo/your-skill.md` → `/your-skill`). The sync script picks it up automatically.
+2. **Name the file to match the command** you want (e.g. `technical-seo/your-skill.md` → `/your-skill`). The sync script picks it up automatically. For autonomous multi-step agents, use the `agents/` subfolder (e.g. `agents/agent-my-workflow.md` → `/agent-my-workflow`).
 
 3. **Run the sync** to generate the Claude Code slash command:
 

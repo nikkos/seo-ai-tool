@@ -4,7 +4,7 @@ This repository contains a library of professional SEO prompts available as Clau
 
 ## Available slash commands
 
-Type `/help` to see all 49 available commands organized by category.
+Type `/help` to see all 50 available commands organized by category.
 
 Quick reference by category:
 
@@ -16,6 +16,7 @@ Quick reference by category:
 - **Analytics:** `/ga4-traffic` `/ga4-conversions` `/ga4-content` `/gsc-indexing` `/gsc-links`
 - **Reporting:** `/competitor-analysis` `/content-gap` `/gsc-performance` `/monthly-report` `/penalty-diagnosis`
 - **GEO / LLM:** `/geo-audit` `/geo-rewrite` `/geo-entity` `/geo-visibility` `/geo-citations`
+- **Agents:** `/agent-monthly-report`
 
 ## Brand voice
 

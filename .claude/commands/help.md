@@ -67,6 +67,9 @@ The commands are:
 - `/geo-visibility` — Generate a brand visibility test set across AI tools
 - `/geo-citations` — Analyze the AI citation landscape and find content opportunities
 
+## Agents
+- `/agent-monthly-report` — Autonomous end-to-end monthly SEO report: detects GA4 and GSC data, runs the full analysis, writes the client report, and saves it to outputs/
+
 ---
 
 **Usage tip:** Most commands accept inline context after the command name. Example:
