@@ -2,11 +2,18 @@
   "name": "seo-ai-tool",
   "version": "1.0.0",
   "description": "50+ professional SEO prompt commands for Claude Code and Gemini CLI",
-  "keywords": ["seo", "claude", "gemini", "ai", "prompts", "cli"],
-  "author": "",
+  "keywords": [
+    "seo",
+    "claude",
+    "gemini",
+    "ai",
+    "prompts",
+    "cli"
+  ],
+  "author": "nlampr",
   "license": "MIT",
   "bin": {
-    "seo-ai-tool": "./bin/cli.js"
+    "seo-ai-tool": "bin/cli.js"
   },
   "files": [
     "bin/",
@@ -17,6 +24,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nikkos/ai-seo-skills.git"
+    "url": "git+https://github.com/nikkos/ai-seo-skills.git"
   }
 }
