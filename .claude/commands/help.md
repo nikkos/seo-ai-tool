@@ -39,7 +39,6 @@ The commands are:
 - `/gbp-description` — Write 3 Google Business Profile description variants
 - `/local-landing` — Write a complete local landing page for a service + city
 - `/review-responses` — Generate 12 review response templates (5-star, 3-star, 1-2 star)
-- `/nap-checker` — Audit NAP consistency across directories
 
 ## E-commerce SEO
 - `/product-description` — Write short, long, and bullet-point product descriptions
