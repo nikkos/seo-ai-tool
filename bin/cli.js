@@ -268,7 +268,7 @@ ${c.bold}EXAMPLES${c.reset}
   cp ~/.claude/commands/write-blog.md .claude/commands/write-blog.md
 
 ${c.bold}DOCS${c.reset}
-  https://github.com/nikkos/seo-ai-tool
+  https://github.com/nikkos/ai-seo-tool
 `);
 }
 
