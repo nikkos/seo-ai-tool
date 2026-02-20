@@ -2,7 +2,7 @@
 
 # 🔍 seo-ai-tool
 
-**50+ professional SEO prompt commands for Claude Code**
+**50+ professional SEO prompt commands for Claude Code and Gemini CLI**
 
 Install once. Use from any folder. Get expert-level SEO output in seconds.
 
@@ -28,12 +28,15 @@ Instead of writing prompts from scratch every time, you type `/write-blog`, `/ro
 
 ## Requirements
 
-| Tool | Install |
-|---|---|
-| **Node.js 16+** | [nodejs.org](https://nodejs.org) |
-| **Claude Code** | `npm install -g @anthropic-ai/claude-code` |
+| Tool | Install | Required? |
+|---|---|---|
+| **Node.js 16+** | [nodejs.org](https://nodejs.org) | Yes |
+| **Claude Code** | `npm install -g @anthropic-ai/claude-code` | One or both |
+| **Gemini CLI** | `npm install -g @google/gemini-cli` | One or both |
 
-Not sure if you have both? Run `seo-ai-tool check` after installing.
+You need at least one AI CLI tool installed. If you have both, prompts are installed for both automatically.
+
+Not sure what you have? Run `seo-ai-tool check` after installing.
 
 ---
 
@@ -47,17 +50,20 @@ npm install -g seo-ai-tool
 seo-ai-tool install
 ```
 
-That's it. All 50+ commands are now available inside Claude Code from any folder on your computer.
+That's it. All 50+ commands are installed for every AI CLI tool you have — Claude Code, Gemini CLI, or both.
 
 ---
 
 ## How to use a command
 
-Start Claude Code in any project folder and type a slash command:
+Start Claude Code or Gemini CLI in any project folder and type a slash command:
 
 ```bash
 cd ~/projects/my-client
-claude
+
+claude   # start Claude Code
+# or
+gemini   # start Gemini CLI
 ```
 
 ```
@@ -69,7 +75,7 @@ claude
 /keyword-research niche: "email marketing tools"
 ```
 
-> If you run a command without input, Claude will tell you exactly what it needs. You never have to guess.
+> If you run a command without input, the AI will tell you exactly what it needs. You never have to guess.
 
 ---
 
@@ -348,14 +354,17 @@ cp ~/.claude/commands/write-blog.md ~/projects/project1/.claude/commands/write-b
 
 ## Customize prompts per project
 
-Claude Code reads commands in this priority order:
+Both Claude Code and Gemini CLI read commands in this priority order:
 
 ```
 .claude/commands/write-blog.md     ← local version (wins if it exists)
 ~/.claude/commands/write-blog.md   ← global version (fallback)
+
+.gemini/commands/write-blog.md     ← local version (wins if it exists)
+~/.gemini/commands/write-blog.md   ← global version (fallback)
 ```
 
-Commit `.claude/commands/` to git and your whole team automatically shares the same customized prompts.
+Commit `.claude/commands/` and `.gemini/commands/` to git and your whole team automatically shares the same customized prompts.
 
 ---
 
