@@ -269,7 +269,9 @@ for the last 3 months broken down by landing page.
 ```
 
 <details>
-<summary>📄 Example MCP configuration (~/.claude/config.json)</summary>
+<summary>📄 Example MCP configuration</summary>
+
+A ready-to-use template is included in the repo as `mcp-example.json`. Copy it to `mcp.json`, fill in your credentials, and point Claude Code at it.
 
 ```json
 {
@@ -280,11 +282,28 @@ for the last 3 months broken down by landing page.
     },
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/your/ai-seo-skills"]
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path/to/ai-seo-skills"]
+    },
+    "google-analytics": {
+      "command": "pipx",
+      "args": ["run", "analytics-mcp"],
+      "env": {
+        "GOOGLE_APPLICATION_CREDENTIALS": "/path/to/service-account-key.json",
+        "GOOGLE_PROJECT_ID": "YOUR_GOOGLE_CLOUD_PROJECT_ID"
+      }
+    },
+    "google-search-console": {
+      "command": "npx",
+      "args": ["-y", "mcp-server-gsc"],
+      "env": {
+        "GOOGLE_APPLICATION_CREDENTIALS": "/path/to/service-account-key.json"
+      }
     }
   }
 }
 ```
+
+> **Note:** The Google Analytics MCP (`analytics-mcp`) requires Python 3.10+ and `pipx`. The GSC MCP (`mcp-server-gsc`) requires Node.js 18+.
 
 </details>
 
