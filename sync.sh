@@ -65,7 +65,13 @@ def sync():
                 break
 
         body = "\n".join(l.rstrip("\n") for l in lines[:cut_idx]) if cut_idx else "".join(lines).rstrip()
-        new_content = body.rstrip() + "\n\n---\n\n$ARGUMENTS\n"
+        new_content = (
+            body.rstrip()
+            + "\n\n---\n\n"
+            + "$ARGUMENTS\n\n"
+            + "If no input is provided above, respond with a short bullet list of exactly "
+            + "what this command needs from the user, then stop. Do not run the analysis.\n"
+        )
 
         # Only write if content changed
         existing = open(cmd_path).read() if os.path.exists(cmd_path) else None

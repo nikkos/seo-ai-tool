@@ -37,3 +37,5 @@ Core Requirements:
 ---
 
 $ARGUMENTS
+
+If no input is provided above, respond with a short bullet list of exactly what this command needs from the user, then stop. Do not run the analysis.

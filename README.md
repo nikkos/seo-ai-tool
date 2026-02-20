@@ -97,6 +97,14 @@ claude
 /gsc-performance GSC data in data/gsc-queries.csv. Site: acme.com. Last 3 months vs prior 3.
 ```
 
+**Not sure what a command needs? Run it with no arguments:**
+
+```
+/gsc-performance
+```
+
+Claude will respond with a bullet list of exactly what to provide, then stop.
+
 **See all available commands:**
 ```
 /help
