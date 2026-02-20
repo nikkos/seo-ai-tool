@@ -6,9 +6,7 @@ Analyze the provided server logs and/or application logs to identify issues rele
 
 Core Requirements:
 
-1) All output must be in English.
-
-2) Analyze the logs for the following SEO-critical signals:
+1) Analyze the logs for the following SEO-critical signals:
    - 4xx errors (especially 404s): identify the most frequently hit broken URLs and whether they are being crawled by bots.
    - 5xx server errors: flag any patterns indicating instability that would prevent Googlebot from crawling pages.
    - Redirect chains and redirect loops: identify URLs going through more than one redirect.
@@ -17,24 +15,24 @@ Core Requirements:
    - Googlebot and other crawler activity: confirm Googlebot is accessing key pages and flag if it is being blocked or rate-limited.
    - Unusual traffic patterns: flag any bot activity that may be scraping or causing unnecessary server load.
 
-3) Prioritize findings by SEO impact:
+2) Prioritize findings by SEO impact:
    - Critical: issues directly preventing indexing or causing ranking loss.
    - High: issues wasting crawl budget or degrading Core Web Vitals.
    - Medium: issues that may cause future problems if not addressed.
    - Low: minor inefficiencies or informational observations.
 
-4) For each finding provide:
+3) For each finding provide:
    - Issue description
    - Evidence from the logs (example entries or URL patterns)
    - SEO impact explanation
    - Priority level
    - Recommended fix
 
-5) At the end, provide a summary section with the top 3 most urgent actions to take.
+4) At the end, provide a summary section with the top 3 most urgent actions to take.
 
-6) Do not include generic SEO advice unrelated to what is found in the logs. Base all findings strictly on the provided data.
+5) Do not include generic SEO advice unrelated to what is found in the logs. Base all findings strictly on the provided data.
 
-7) Do not include explanations or meta commentary. Output only the final analysis report.
+6) Do not include explanations or meta commentary. Output only the final analysis report.
 
 Input I Will Provide:
 

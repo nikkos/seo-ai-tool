@@ -6,36 +6,34 @@ Write a fully optimized, publication-ready blog post that targets the provided p
 
 Core Requirements:
 
-1) All output must be in English.
-
-2) Structure the post with a clear heading hierarchy:
+1) Structure the post with a clear heading hierarchy:
    - One H1 (the post title) containing the primary keyword.
    - Multiple H2 sections covering the main subtopics.
    - H3 subheadings where appropriate for deeper breakdowns.
 
-3) Place the primary keyword:
+2) Place the primary keyword:
    - In the H1 title
    - Within the first 100 words of the introduction
    - Naturally 2-4 more times throughout the body
    - In at least one H2 heading (if it fits naturally)
 
-4) Integrate secondary and long-tail keywords naturally throughout the text. Never force keywords.
+3) Integrate secondary and long-tail keywords naturally throughout the text. Never force keywords.
 
-5) Word count must be between 1,200 and 1,800 words unless a different length is specified in the input.
+4) Word count must be between 1,200 and 1,800 words unless a different length is specified in the input.
 
-6) The introduction must hook the reader immediately. State the problem or question, then indicate what the post will deliver.
+5) The introduction must hook the reader immediately. State the problem or question, then indicate what the post will deliver.
 
-7) Each section must provide genuine value: concrete information, examples, or actionable advice.
+6) Each section must provide genuine value: concrete information, examples, or actionable advice.
 
-8) Include a clear conclusion with a summary and a call-to-action (CTA) relevant to the website's goals.
+7) Include a clear conclusion with a summary and a call-to-action (CTA) relevant to the website's goals.
 
-9) Suggest at least two internal linking opportunities with placeholder anchor text and a note on the type of page to link to.
+8) Suggest at least two internal linking opportunities with placeholder anchor text and a note on the type of page to link to.
 
-10) At the end, provide a suggested meta title (50-60 characters) and meta description (150-160 characters) for the post.
+9) At the end, provide a suggested meta title (50-60 characters) and meta description (150-160 characters) for the post.
 
-11) Do not use em dashes (—) anywhere in the article.
+10) Do not use em dashes (—) anywhere in the article.
 
-12) Do not include AI disclaimers, explanations, or meta commentary. Output only the final blog post followed by the meta title and meta description.
+11) Do not include AI disclaimers, explanations, or meta commentary. Output only the final blog post followed by the meta title and meta description.
 
 Input I Will Provide:
 
