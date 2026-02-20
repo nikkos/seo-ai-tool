@@ -21,6 +21,7 @@ Instead of writing prompts from scratch, you type a command and a structured exp
 - [Prompt Reference](#-prompt-reference)
 - [Adding a New Skill](#-adding-a-new-skill)
 - [Contributing](#-contributing)
+- [Disclaimer](#️-disclaimer)
 
 ---
 
@@ -41,36 +42,48 @@ Instead of writing prompts from scratch, you type a command and a structured exp
 
 ### 1. Claude Code (recommended)
 
-**Install Claude Code:**
+**Step 1 — Install Claude Code:**
 
 ```bash
 npm install -g @anthropic-ai/claude-code
 ```
 
-**Clone this repo:**
+**Step 2 — Clone this repo:**
 
 ```bash
 git clone https://github.com/nikkos/ai-seo-skills.git
-```
-
-**Set up the slash commands** — two options:
-
-**Option A — Use directly from the repo (simplest):**
-```bash
 cd ai-seo-skills
-claude
 ```
-Commands are available immediately. No installation needed.
 
-**Option B — Install globally (use from any folder on your machine):**
+**Step 3 — Run the global setup script (one time only):**
+
 ```bash
-# Symlink the commands so every project gets them automatically
-mv ~/.claude/commands ~/.claude/commands.bak   # back up existing if any
-ln -s /path/to/ai-seo-skills/.claude/commands ~/.claude/commands
+./setup.sh
 ```
-Then open any client folder and the commands are ready:
+
+This symlinks the slash commands globally and installs `CLAUDE.md` so Claude has full context from any folder on your machine.
+
+**Step 4 — Create a client project:**
+
 ```bash
-cd ~/projects/acme-corp
+./new-client.sh acme-corp
+# or specify a path:
+./new-client.sh acme-corp ~/projects
+```
+
+This creates a ready-to-use folder:
+
+```
+acme-corp/
+├── brand-voice.md   ← fill this in
+├── data/            ← drop CSV exports, screenshots, logs here
+└── outputs/         ← AI outputs saved here automatically
+```
+
+**Step 5 — Fill in `brand-voice.md`, then start working:**
+
+```bash
+cd acme-corp
 claude
 ```
 
@@ -83,8 +96,6 @@ claude
 
 /gsc-performance GSC data in data/gsc-queries.csv. Site: acme.com. Last 3 months vs prior 3.
 ```
-
-Output is saved automatically to `outputs/`.
 
 **See all available commands:**
 ```
